@@ -1,0 +1,12 @@
+# Core runtime
+torch
+transformers
+safetensors
+
+# Extension build + model download/runtime helpers
+ninja
+packaging
+setuptools
+wheel
+tqdm
+huggingface_hub

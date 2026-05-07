@@ -1,0 +1,111 @@
+# ---------------------------------------------------------------------------
+# Vacuum-sealed model directories (quantizer output)
+# ---------------------------------------------------------------------------
+# These directories are produced by quantize_real_llama.py / quantize_model.py
+# and contain per-layer .safetensors files plus a report.json. They are large
+# (often several GB) and trivially regenerated, so they should never be
+# committed.
+vacuum_sealed_model/
+vacuum_sealed_*/
+**/vacuum_sealed_*/
+
+# Any other "packed" checkpoint folders someone might create alongside.
+*.vacuum/
+*_packed/
+*_quantized/
+
+# ---------------------------------------------------------------------------
+# Hugging Face / model cache directories
+# ---------------------------------------------------------------------------
+# In case anyone points HF_HOME or TRANSFORMERS_CACHE inside the repo.
+hf_cache/
+.hf_cache/
+huggingface/
+.huggingface/
+models/
+checkpoints/
+
+# Loose model weight files that should never live in the repo.
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.onnx
+
+# ---------------------------------------------------------------------------
+# Python virtual environments
+# ---------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+.env/
+.python-version
+pip-wheel-metadata/
+
+# ---------------------------------------------------------------------------
+# PyTorch / CUDA extension build artifacts
+# ---------------------------------------------------------------------------
+# JIT build cache used by torch.utils.cpp_extension.load.
+.torch_extensions/
+
+# Ahead-of-time setup.py build outputs.
+build/
+dist/
+*.egg-info/
+*.egg
+*.so
+*.pyd
+*.dll
+*.dylib
+
+# ---------------------------------------------------------------------------
+# Python bytecode and tooling caches
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# ---------------------------------------------------------------------------
+# Local environment / secrets
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.local
+
+# ---------------------------------------------------------------------------
+# Editor and IDE files
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---------------------------------------------------------------------------
+# OS noise
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------------------
+# Logs and scratch output
+# ---------------------------------------------------------------------------
+*.log
+logs/
+runs/
+outputs/
+tmp/
+scratch/
