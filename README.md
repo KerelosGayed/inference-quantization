@@ -1,4 +1,4 @@
-# inference-quantization
+# Inference Quantization
 
 A from-scratch toolkit for squeezing modern large language models down to roughly **1.58 bits per weight** and running them on a single consumer GPU. The project pairs a small set of hand-tuned CUDA kernels with a streaming quantizer and a drop-in inference runtime, so an 8B-parameter model that normally needs ~16 GB of VRAM can sit comfortably inside the 12 GB budget of an RTX 3080 Ti while still producing coherent text.
 
